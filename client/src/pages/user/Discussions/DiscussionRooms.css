@@ -1,0 +1,488 @@
+.discussion-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: #f7f9fc;
+}
+
+/* ========================================
+   Header
+======================================== */
+
+.discussion-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.discussion-header-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #0077b6;
+  color: white;
+}
+
+.discussion-header h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #172033;
+}
+
+.discussion-header p {
+  margin: 6px 0 0;
+
+  color: #687386;
+  font-size: 15px;
+}
+
+/* ========================================
+   Statistics
+======================================== */
+
+.discussion-stats {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.discussion-stat-card {
+  min-width: 220px;
+
+  padding: 18px 20px;
+
+  background: white;
+
+  border: 1px solid #e6eaf0;
+
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #e8f4fb;
+  color: #0077b6;
+}
+
+.discussion-stat-card strong {
+  display: block;
+
+  font-size: 21px;
+  color: #172033;
+}
+
+.discussion-stat-card span {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 13px;
+  color: #7a8494;
+}
+
+/* ========================================
+   Room Grid
+======================================== */
+
+.discussion-room-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fill,
+      minmax(300px, 1fr)
+    );
+
+  gap: 22px;
+}
+
+/* ========================================
+   Room Card
+======================================== */
+
+.discussion-room-card {
+  background: white;
+
+  border: 1px solid #e4e8ef;
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.discussion-room-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #b8dced;
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.07);
+}
+
+/* ========================================
+   Card Top
+======================================== */
+
+.room-card-top {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 20px;
+}
+
+.room-company-icon {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e8f4fb;
+
+  color: #0077b6;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.room-card-heading h3 {
+  margin: 0;
+
+  font-size: 17px;
+  color: #172033;
+}
+
+.room-card-heading p {
+  margin: 3px 0 0;
+
+  color: #7a8494;
+
+  font-size: 13px;
+}
+
+/* ========================================
+   Card Content
+======================================== */
+
+.room-card-content {
+  min-height: 85px;
+}
+
+.room-card-content h2 {
+  margin: 0 0 8px;
+
+  font-size: 19px;
+
+  color: #172033;
+}
+
+.room-description {
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  color: #727d8e;
+}
+
+/* ========================================
+   Room Info
+======================================== */
+
+.room-card-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 15px 0;
+
+  border-top: 1px solid #edf0f4;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.room-info-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #697586;
+
+  font-size: 13px;
+}
+
+.room-info-item svg {
+  color: #0077b6;
+}
+
+/* ========================================
+   Join Button
+======================================== */
+
+.join-room-button {
+  width: 100%;
+
+  margin-top: 17px;
+
+  padding: 12px 16px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #0077b6;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.join-room-button:hover {
+  background: #00689f;
+
+  transform: translateY(-1px);
+}
+
+.join-room-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* ========================================
+   Loading
+======================================== */
+
+.discussion-loading {
+  min-height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  color: #697586;
+}
+
+.discussion-spinner {
+  width: 35px;
+  height: 35px;
+
+  border: 3px solid #dce6ec;
+
+  border-top-color: #0077b6;
+
+  border-radius: 50%;
+
+  animation:
+    discussionSpin 0.8s linear infinite;
+}
+
+@keyframes discussionSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   Error
+======================================== */
+
+.discussion-error {
+  margin-bottom: 25px;
+
+  padding: 14px 17px;
+
+  border-radius: 10px;
+
+  background: #fff2f2;
+
+  border: 1px solid #ffd5d5;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.discussion-error p {
+  margin: 0;
+
+  color: #c62828;
+
+  font-size: 14px;
+}
+
+.discussion-error button {
+  border: none;
+
+  background: white;
+
+  color: #c62828;
+
+  border: 1px solid #ffc7c7;
+
+  padding: 8px 13px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+/* ========================================
+   Empty State
+======================================== */
+
+.discussion-empty {
+  min-height: 300px;
+
+  background: white;
+
+  border: 1px dashed #ccd4df;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px;
+}
+
+.empty-icon {
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #e8f4fb;
+
+  color: #0077b6;
+
+  margin-bottom: 16px;
+}
+
+.discussion-empty h2 {
+  margin: 0 0 8px;
+
+  color: #172033;
+
+  font-size: 20px;
+}
+
+.discussion-empty p {
+  margin: 0;
+
+  color: #7a8494;
+
+  font-size: 14px;
+}
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 768px) {
+
+  .discussion-page {
+    padding: 25px 18px;
+  }
+
+  .discussion-header h1 {
+    font-size: 25px;
+  }
+
+  .discussion-stats {
+    flex-direction: column;
+  }
+
+  .discussion-stat-card {
+    width: 100%;
+  }
+
+  .discussion-room-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

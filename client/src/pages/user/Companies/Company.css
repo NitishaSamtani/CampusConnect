@@ -1,0 +1,172 @@
+.companies-page {
+  min-height: 100vh;
+  padding: 40px 50px 60px;
+  background: #f4f8fb;
+  box-sizing: border-box;
+}
+
+.companies-header {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+.companies-header h1 {
+  margin: 0 0 8px;
+  color: #0077b6;
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.companies-header p {
+  margin: 0;
+  color: #536b80;
+  font-size: 17px;
+}
+
+.companies-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.company-card {
+  min-height: 240px;
+  padding: 28px;
+
+  background: #ffffff;
+  border: 1px solid #e0eaf1;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 24px rgba(15, 61, 92, 0.08);
+
+  display: flex;
+  flex-direction: column;
+
+  transition: 0.2s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(15, 61, 92, 0.12);
+}
+
+.company-logo {
+  width: 64px;
+  height: 64px;
+
+  margin-bottom: 22px;
+
+  border-radius: 16px;
+
+  background: #087fba;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.company-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.company-card-content h2 {
+  margin: 0 0 10px;
+
+  color: #123b5d;
+  font-size: 24px;
+}
+
+.company-experience-count {
+  margin: 0;
+
+  color: #687d8e;
+  font-size: 15px;
+}
+
+.company-experience-count strong {
+  color: #0077b6;
+}
+
+.view-company-btn {
+  width: fit-content;
+
+  margin-top: auto;
+  padding-top: 20px;
+
+  color: #0077b6;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.view-company-btn:hover {
+  color: #005f91;
+}
+
+.companies-loading {
+  padding: 60px;
+  text-align: center;
+
+  color: #0077b6;
+  font-size: 18px;
+}
+
+.companies-error,
+.companies-empty {
+  max-width: 700px;
+  margin: 60px auto;
+
+  padding: 45px;
+
+  background: white;
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 24px rgba(15, 61, 92, 0.08);
+}
+
+.companies-error h2,
+.companies-empty h2 {
+  color: #123b5d;
+}
+
+.companies-error p,
+.companies-empty p {
+  color: #687d8e;
+}
+
+@media (max-width: 1000px) {
+  .companies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .companies-page {
+    padding: 35px 28px;
+  }
+}
+
+@media (max-width: 650px) {
+  .companies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .companies-page {
+    padding: 25px 16px;
+  }
+
+  .companies-header h1 {
+    font-size: 34px;
+  }
+}

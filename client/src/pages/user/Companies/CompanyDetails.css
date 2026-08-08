@@ -1,0 +1,288 @@
+.company-details-page {
+  min-height: 100vh;
+  padding: 40px 50px 60px;
+
+  background: #f4f8fb;
+  box-sizing: border-box;
+}
+
+.company-details-header,
+.roles-section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-link {
+  display: inline-block;
+
+  margin-bottom: 24px;
+
+  color: #0077b6;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #005f91;
+}
+
+.company-details-main {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  padding: 32px;
+
+  background: #ffffff;
+
+  border: 1px solid #e0eaf1;
+  border-radius: 20px;
+
+  box-shadow: 0 8px 24px rgba(15, 61, 92, 0.08);
+}
+
+.company-details-logo {
+  width: 90px;
+  height: 90px;
+
+  flex-shrink: 0;
+
+  border-radius: 20px;
+
+  background: #087fba;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.company-details-main h1 {
+  margin: 0 0 8px;
+
+  color: #123b5d;
+
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.company-description {
+  margin: 0;
+
+  color: #687d8e;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.roles-section {
+  margin-top: 30px;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e0eaf1;
+  border-radius: 20px;
+
+  box-shadow: 0 8px 24px rgba(15, 61, 92, 0.07);
+}
+
+.roles-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.roles-section-header h2 {
+  margin: 0 0 6px;
+
+  color: #123b5d;
+
+  font-size: 28px;
+}
+
+.roles-section-header p {
+  margin: 0;
+
+  color: #687d8e;
+}
+
+.roles-count {
+  padding: 8px 15px;
+
+  background: #eaf6fc;
+  color: #0077b6;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.roles-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.role-card {
+  min-height: 170px;
+
+  padding: 24px;
+
+  background: #f8fbfd;
+
+  border: 1px solid #dce8ef;
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: 0.2s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 20px rgba(15, 61, 92, 0.08);
+}
+
+.role-card-content {
+  flex: 1;
+}
+
+.role-card h3 {
+  margin: 0 0 10px;
+
+  color: #123b5d;
+
+  font-size: 21px;
+}
+
+.experience-count {
+  margin: 0;
+
+  color: #687d8e;
+  font-size: 14px;
+}
+
+.experience-count strong {
+  color: #0077b6;
+}
+
+.role-link {
+  width: fit-content;
+
+  margin-top: 20px;
+
+  color: #0077b6;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.role-link:hover {
+  color: #005f91;
+}
+
+.no-roles {
+  padding: 50px 25px;
+
+  text-align: center;
+
+  background: #f8fbfd;
+
+  border: 1px dashed #c8dce8;
+
+  border-radius: 15px;
+}
+
+.no-roles h3 {
+  margin: 0 0 8px;
+
+  color: #123b5d;
+}
+
+.no-roles p {
+  margin: 0;
+
+  color: #687d8e;
+}
+
+.company-details-page .companies-loading {
+  max-width: 600px;
+  margin: 60px auto;
+
+  background: white;
+  border-radius: 18px;
+}
+
+.company-details-page .companies-error {
+  max-width: 600px;
+  margin: 60px auto;
+
+  padding: 40px;
+
+  background: white;
+  border-radius: 18px;
+
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .roles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-details-page {
+    padding: 35px 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .company-details-page {
+    padding: 25px 16px;
+  }
+
+  .company-details-main {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 24px;
+  }
+
+  .company-details-logo {
+    width: 70px;
+    height: 70px;
+
+    font-size: 32px;
+  }
+
+  .company-details-main h1 {
+    font-size: 30px;
+  }
+
+  .roles-section {
+    padding: 22px;
+  }
+
+  .roles-section-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

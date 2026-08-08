@@ -1,0 +1,433 @@
+/* =========================================================
+   PROFILE PAGE
+   ========================================================= */
+
+.profile-page {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 36px 48px 70px;
+  background: #f4f8fb;
+  color: #16324f;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.profile-header-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 34px;
+  margin-bottom: 24px;
+  background: #ffffff;
+  border: 1px solid #e1ebf2;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(20, 50, 80, 0.07);
+}
+
+.profile-avatar {
+  flex-shrink: 0;
+  width: 86px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eaf6fb;
+  border: 3px solid #d3edf8;
+  color: #0077b6;
+}
+
+.profile-header-card h1 {
+  margin: 0 0 5px;
+  color: #0f3557;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.profile-header-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.edit-profile-btn {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 17px;
+  border: 1px solid #0077b6;
+  border-radius: 9px;
+  background: #0077b6;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.edit-profile-btn:hover {
+  background: #005f91;
+  border-color: #005f91;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.profile-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 28px 30px;
+  margin-bottom: 22px;
+  background: #ffffff;
+  border: 1px solid #e1ebf2;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(20, 50, 80, 0.05);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 17px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #edf2f6;
+  color: #0077b6;
+}
+
+.section-title h2 {
+  margin: 0;
+  color: #0f3557;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+/* =========================================================
+   PERSONAL INFORMATION
+   ========================================================= */
+
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 70px;
+  row-gap: 22px;
+}
+
+.profile-info-grid > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 2px 0;
+}
+
+.profile-info-grid span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.profile-info-grid strong {
+  color: #16324f;
+  font-size: 15px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   EDIT FORM
+   ========================================================= */
+
+.profile-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 22px;
+}
+
+.profile-form > div:not(.profile-actions) {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.profile-form label {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.profile-form input {
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  padding: 0 13px;
+  border: 1px solid #d5e0e8;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #1e293b;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.profile-form input:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.08);
+}
+
+.profile-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 5px;
+}
+
+.save-btn,
+.cancel-btn {
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.save-btn {
+  border: 1px solid #0077b6;
+  background: #0077b6;
+  color: #ffffff;
+}
+
+.save-btn:hover {
+  background: #005f91;
+  border-color: #005f91;
+}
+
+.save-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  border: 1px solid #d5e0e8;
+  background: #f8fafc;
+  color: #475569;
+}
+
+.cancel-btn:hover {
+  border-color: #94a3b8;
+  background: #eef3f6;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-text {
+  margin: 0;
+  padding: 28px 20px;
+  border: 1px dashed #cbd9e3;
+  border-radius: 11px;
+  background: #f8fbfd;
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* =========================================================
+   EXPERIENCES
+   ========================================================= */
+
+.profile-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.profile-list-card {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #e1ebf2;
+  border-radius: 12px;
+  background: #fbfdfe;
+  transition: 0.2s ease;
+}
+
+.profile-list-card:hover {
+  border-color: #b9dce9;
+  box-shadow: 0 5px 15px rgba(20, 50, 80, 0.06);
+  transform: translateY(-2px);
+}
+
+.profile-list-card h3 {
+  margin: 0 0 7px;
+  color: #0f3557;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.profile-list-card p {
+  margin: 0 0 14px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Result badge */
+
+.result {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.result.selected {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.result.rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* =========================================================
+   COMMENTS
+   ========================================================= */
+
+.comment-card {
+  padding: 20px;
+  border: 1px solid #e1ebf2;
+  border-radius: 12px;
+  background: #fbfdfe;
+  transition: 0.2s ease;
+}
+
+.comment-card:hover {
+  border-color: #b9dce9;
+  box-shadow: 0 5px 15px rgba(20, 50, 80, 0.06);
+}
+
+.comment-card p {
+  margin: 0 0 10px;
+  color: #1e293b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.comment-card small {
+  display: block;
+  color: #0077b6;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   LOADING / ERROR
+   ========================================================= */
+
+.profile-loading,
+.profile-error {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  color: #0077b6;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .profile-page {
+    padding: 28px 25px 55px;
+  }
+
+  .profile-header-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .edit-profile-btn {
+    margin-left: 108px;
+  }
+
+  .profile-info-grid,
+  .profile-form,
+  .profile-list {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-actions {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-page {
+    padding: 18px 14px 40px;
+  }
+
+  .profile-header-card,
+  .profile-section {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .profile-header-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-avatar {
+    width: 72px;
+    height: 72px;
+  }
+
+  .profile-header-card h1 {
+    font-size: 27px;
+  }
+
+  .edit-profile-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .section-title h2 {
+    font-size: 20px;
+  }
+
+  .profile-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .save-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}
