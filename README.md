@@ -131,9 +131,6 @@ Administrators can manage and moderate platform content, including:
 
 ---
 
-## 🏗️ Working Architecture
-https://ibb.co/0jVZCLqz
-
 ### Architecture Flow
 
 ```text
